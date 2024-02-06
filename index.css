@@ -1,0 +1,134 @@
+@keyframes changeBackground {
+    0% {
+        background-image: url('back1.png');
+    }
+
+    50% {
+        background-image: url('back2.png');
+    }
+
+    100% {
+        background-image: url('back1.png');
+    }
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    background-repeat: no-repeat;
+    /* 이미지 반복 없음 */
+    background-attachment: fixed;
+    /* 배경 이미지 고정 */
+    background-position: center bottom;
+    /* 중앙 하단에 배경 이미지 위치 */
+    background-size: cover;
+    /* 배경 이미지가 컨테이너를 꽉 채우도록 설정 */
+    animation: changeBackground 20s infinite;
+    /* 10초 동안 무한 반복 */
+}
+
+nav {
+    transition: background-color 1s ease;
+    /* 배경색 전환 애니메이션 설정 */
+    color: white;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav:hover {
+    background-color: white;
+}
+
+.scroll-down {
+    background-color: white !important;
+    /* 스크롤이 최상단이 아닐 때 배경색을 입힘 */
+}
+
+nav .container-fluid {
+    margin: 0.5% 10% 0.5% 10%;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0 5em;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.navbar-nav li {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.3em;
+}
+
+a:hover {
+    color: red !important;
+}
+
+.background {
+    width: 100%;
+}
+
+.main-sec {
+    padding-top: 14em;
+}
+
+.body-sec {
+    padding-top: 10em;
+}
+
+.title {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 7vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title-sub {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 6vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.div-container {
+    margin: 3vw;
+}
+
+.view-container {
+    margin: 3vw;
+}
+
+.content {
+    font-family: 'Black Han Sans', sans-serif;
+    color: white;
+    font-size: 5vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    font-family: 'Nanum Gothic', sans-serif;
+    height: 235px;
+    width: 100%;
+    background-color: black;
+    color: white !important;
+    bottom: 0;
+}
+
+footer section {
+    padding-top: 1%;
+}
