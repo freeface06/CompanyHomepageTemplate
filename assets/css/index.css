@@ -1,14 +1,14 @@
 @keyframes changeBackground {
     0% {
-        background-image: url('back1.png');
+        background-image: url('../img/back1.png');
     }
-
+    
     50% {
-        background-image: url('back2.png');
+        background-image: url('../img/back2.png');
     }
-
+    
     100% {
-        background-image: url('back1.png');
+        background-image: url('../img/back1.png');
     }
 }
 
@@ -49,6 +49,10 @@ nav {
 
 nav:hover {
     background-color: white;
+}
+
+.logo {
+    width: 5vw;
 }
 
 .scroll-down {
